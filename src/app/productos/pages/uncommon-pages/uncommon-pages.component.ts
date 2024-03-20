@@ -19,4 +19,17 @@ export class UncommonPagesComponent {
     this.gender = 'female'
   }
 
+   public clientes: string[] = ['hector','mario','perla','mayra','gus','oscar','eli','miguelito'] 
+   public clientesMap = {
+    '=0':'no tenemos ningun cliente esperando.',
+    '=1':'tenemos un cliente esperando.',
+    '=2':'tenemos 2 clientes esperando.',
+    'other':'tenemos # clientes esperando.'
+   }
+
+   deleteClient(){
+    this.clientes.shift()
+  
+  }
+
 }
